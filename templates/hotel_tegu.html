@@ -1,0 +1,214 @@
+{% load cms_tags sekizai_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% page_attribute "page_title" %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  {% render_block "css" %}
+  <!-- =======================================================
+  * Template Name: BizLand - v3.8.1
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  {% cms_toolbar %}
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">edanielcarmonac@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+504 3244-4350</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">AirBnB Honduras<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'app_djangocms:inicio' %}">Inicio</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'app_djangocms:alojamiento' %}">Alojamientos</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'app_djangocms:equipo' %}">Equipo</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'app_djangocms:contacto' %}">Contacto</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Disponibles</h2>
+        <h3>Los Mejores de <span> Tegucigalpa</span></h3>
+        <p>El segundo país más grande de América Central también
+          cuenta con un clima cálido durante todo el año, antiguas
+          ruinas mayas y docenas de parques nacionales.
+          así como con las hermosas Islas de la Bahía.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <img src="{% static 'assets/img/testimonials/hotel1.png'%}" class="testimonial-img" alt="">
+              <p>Clarion Hotel Real Tegucigalpa
+                  Hotel in Tegucigalpa</p>
+              <p>El Clarion Hotel Real Tegucigalpa se 
+                  ncuentra en pleno centro financiero
+                  y de ocio de la ciudad.</p>
+              <p>Precio: HNL 2,850 por noche</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <img src="{% static 'assets/img/testimonials/hotel2.png'%}" class="testimonial-img" alt="">
+              <p> Hotel en Tegucigalpa</p>
+              <p>El Holiday Inn Express Tegucigalpa se
+                  encuentra en el centro del nuevo barrio
+                  financiero de Tegucigalpa y cuenta con
+                  piscina al aire libre y centro de fitness.
+                  Bed and bathroom and the door of closet</p>
+              <p> Precios: HNL 2.461 por noche</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <img src="{% static 'assets/img/testimonials/2.png'%}" class="testimonial-img" alt="">
+              <p>Hotel en Tegucigalpa</p>
+              <p>El Hotel Plaza Juancarlos está situado a 400 metros
+                  de la embajada de EE.UU. y a 2 km del centro
+                  de la ciudad de Tegucigalpa y dispone de conexión 
+                  WiFi gratuita y un restaurante.</p>
+              <p>Precios: HNL 2.075 por noche</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+          
+          <div class="icon-box">
+            <img src="{% static 'assets/img/testimonials/hotel5.png'%}" class="testimonial-img" alt="">
+              <p>Hotel en Tegucigalpa</p>
+              <p>El Minister Business Hotel se encuentra
+                  en Tegucigalpa y ofrece bar, terraza,
+                  restaurante, recepción 24 horas, servicio
+                  de habitaciones y WiFi gratuita en todas las instalaciones.</p>
+              <p>Precios: HNL 1.737 por noche</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+          
+          <div class="icon-box">
+            <img src="{% static 'assets/img/testimonials/hotel5,1.png'%}" class="testimonial-img" alt="">
+              <p>Hotel en Tegucigalpa</p>
+              <p>G y V Hotels situado en el centro de Tegucigalpa,
+                  es un hotel pintoresco que presenta una
+                  decoración moderna y que ofrece conexión Wi-Fi
+                  gratuita y un desayuno también gratuito.</p>
+              <p>Precios: HNL 1.149 por noche</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container text-center">
+        
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        
+      </div>
+    </div>
+
+    
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>AirBnB Honduras</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  {% render_block "js" %}
+
+</body>
+
+</html>
